@@ -36,7 +36,7 @@ class UserController extends Controller
 
         //filter data user berdasarkan lecvel_id
         if($request->level_id){
-            $users->where('level_id',$request->level_id);
+            $users->where('level_id', $request->level_id);
         }
     
         return DataTables::of($users)
@@ -151,5 +151,4 @@ class UserController extends Controller
             return redirect('/user')->with('error', 'Data user gagal dihapus karena masih terdapat tabel lain yang terkait dengan data ini');
         }
     }
-    
 }
